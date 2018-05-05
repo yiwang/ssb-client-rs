@@ -1,0 +1,14 @@
+language: rust
+
+sudo: required
+
+before_install:
+    - sudo apt-get update -q
+    - sudo apt-get install libssh-dev -y
+
+rust:
+    - stable
+    - beta
+    - nightly
+script:
+    - cargo build --verbose --all
